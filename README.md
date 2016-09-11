@@ -6,7 +6,7 @@ JavaScript component to compute base 58 check encoding. This encoding is typical
 Install
 -------
 
-npm i --save base58check
+  npm i --save base58check
 
 API
 ---
