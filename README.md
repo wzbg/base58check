@@ -1,5 +1,5 @@
-# base58check
-=============
+base58check
+===========
 
 [![build status](https://secure.travis-ci.org/cryptocoinjs/bs58.png)](http://travis-ci.org/cryptocoinjs/bs58)
 
