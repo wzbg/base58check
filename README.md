@@ -1,12 +1,14 @@
 # base58check
 =============
 
+[![build status](https://secure.travis-ci.org/cryptocoinjs/bs58.png)](http://travis-ci.org/cryptocoinjs/bs58)
+
 JavaScript component to compute base 58 check encoding. This encoding is typically used for crypto currencies such as Bitcoin.
 
 Install
 -------
 
-  npm i --save base58check
+    npm i --save base58check
 
 API
 ---
