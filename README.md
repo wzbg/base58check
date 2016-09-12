@@ -13,7 +13,7 @@ Install
 API
 ---
 
-### string base58check(data, prefix = '00', encoding = 'hex')
+### string encode(data, prefix = '00', encoding = 'hex')
 
 `data` must be a [Buffer](http://nodejs.org/api/buffer.html) or a `string`. It returns a `string`.
 
@@ -22,8 +22,26 @@ API
 ```js
 const base58check = require('base58check')
 
-let data = 'f5f2d624cfb5c3f66d06123d0829d1c9cebf770e'
-console.log(base58check(data)) // => 1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK
+const data = '086eaa677895f92d4a6c5ef740c168932b5e3f44'
+console.log(base58check.encode(data)) // => 1mayif3H2JDC62S4N3rLNtBNRAiUUP99k
+```
+
+### { prefix, data } decode(string[, encoding])
+
+`string` must be a base 58 check encoded string. Returns a `Object` for prefix & data.
+
+**example**:
+
+```js
+const base58check = require('base58check')
+
+const address = '1mayif3H2JDC62S4N3rLNtBNRAiUUP99k'
+console.log(base58check.decode(address))
+// => { prefix: <Buffer 00>, data: <Buffer 08 6e aa 67 78 95 f9 2d 4a 6c 5e f7 40 c1 68 93 2b 5e 3f 44> }
+
+// if using encoding
+console.log(base58check.decode(address, 'hex'))
+// => { prefix: '00', data: '086eaa677895f92d4a6c5ef740c168932b5e3f44' }
 ```
 
 Hack / Test
